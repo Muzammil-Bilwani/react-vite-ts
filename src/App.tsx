@@ -1,15 +1,25 @@
-import "./App.css"
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import "./App.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { routes } from "./routes/routes";
+import { QueryClient, QueryClientProvider } from "react-query";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <div>Hello world!</div>
-  }
-])
+const router = createBrowserRouter(routes);
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false,
+      retry: false,
+    },
+  },
+});
 
 function App() {
-  return <RouterProvider router={router} />
+  return (
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} />
+    </QueryClientProvider>
+  );
 }
 
-export default App
+export default App;
