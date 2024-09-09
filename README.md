@@ -1,27 +1,42 @@
-# React + TypeScript + Vite
+## React + Vite + Typescript + React Query + Ant Design
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a template for creating a React project with Vite, Typescript, React Query and Ant Design.
 
-Currently, two official plugins are available:
+### Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Vite](https://vitejs.dev/)
+- [React](https://reactjs.org/)
+- [Typescript](https://www.typescriptlang.org/)
+- [React Query](https://react-query.tanstack.com/)
+- [Ant Design](https://ant.design/)
 
-## Expanding the ESLint configuration
+#### Whats already built in
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Vite
+- React Router with a sample route
+- Ant Design with a sample component for Login
+- React Query with a sample query for login
 
-- Configure the top-level `parserOptions` property like this:
+### Getting Started
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+```bash
+# Clone the repository
+git clone https://github.com/Muzammil-Bilwani/react-vite-ts
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+or use this template to create a new repository.
+
+```bash
+# Install dependencies
+yarn install
+```
+
+```bash
+# Start the development server
+yarn dev
+```
+
+```bash
+# Build for production
+yarn build
+```
